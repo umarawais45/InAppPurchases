@@ -1,15 +1,10 @@
 # InAppPurchases
 
-[![CI Status](https://img.shields.io/travis/Umar Awais/InAppPurchases.svg?style=flat)](https://travis-ci.org/Umar Awais/InAppPurchases)
-[![Version](https://img.shields.io/cocoapods/v/InAppPurchases.svg?style=flat)](https://cocoapods.org/pods/InAppPurchases)
-[![License](https://img.shields.io/cocoapods/l/InAppPurchases.svg?style=flat)](https://cocoapods.org/pods/InAppPurchases)
-[![Platform](https://img.shields.io/cocoapods/p/InAppPurchases.svg?style=flat)](https://cocoapods.org/pods/InAppPurchases)
+Handle in-app purchases in iOS in a convenient way.
 
-## Example
+## Overview
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+InAppPurchases covers all the basic aspects of in-app purchases in swift including purchase of a product, restore, request products, validation of receipt, auto parsing of receipt validation response and managing subscription on App Store. All the functions are available with callbacks.
 
 ## Installation
 
@@ -18,6 +13,48 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'InAppPurchases'
+```
+
+## Usage
+
+Create an instance of InAppPurchase Module
+```ruby
+let inAppPurchases = InAppPurchases()
+```
+
+#### Purchase a product
+```ruby
+inAppPurchases.purchaseProduct(productIdentifier: "Your Product ID") { success in 
+    print(success)
+}
+```
+
+#### Restore purchase
+```ruby
+inAppPurchases.restorePurchase() { success in 
+    print(success)
+}
+```
+
+#### Request Products
+```ruby
+inAppPurchases.requestProducts([Your ProductIDs]) { products in
+    for product in products {
+        print(product.localizedPrice())
+    }
+}
+```
+
+#### Validate Purchase 
+```ruby
+inAppPurchases.isProductPurchased("Your Product ID", appSharedSecret: "Your app shared secret") { purchased in 
+    print(purchased)
+}
+```
+
+#### Open App Store Subscriptions Page
+```ruby
+inAppPurchases.manageSubscriptionsOnAppStore()
 ```
 
 ## Author

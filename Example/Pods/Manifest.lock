@@ -1,0 +1,16 @@
+PODS:
+  - InAppPurchases (0.1.0)
+
+DEPENDENCIES:
+  - InAppPurchases (from `../`)
+
+EXTERNAL SOURCES:
+  InAppPurchases:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  InAppPurchases: ad676de4308148950aba2793c687962289843519
+
+PODFILE CHECKSUM: f659f8511bfbb25a35cd5234d04da5cdb824292b
+
+COCOAPODS: 1.11.2
