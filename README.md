@@ -38,7 +38,7 @@ inAppPurchases.restorePurchase() { success in
 
 #### Request Products
 ```ruby
-inAppPurchases.requestProducts([Your ProductIDs]) { products in
+inAppPurchases.requestProducts(\\[Your ProductIDs\\]) { products in
     for product in products {
         print(product.localizedPrice())
     }
