@@ -1,6 +1,6 @@
 # InAppPurchases
 
-Handle in-app purchases in iOS in a convenient way.
+Handle in-app purchases in swift in a convenient way.
 
 ## Overview
 
