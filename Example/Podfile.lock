@@ -1,5 +1,5 @@
 PODS:
-  - InAppPurchases (0.1.0)
+  - InAppPurchases (1.0)
 
 DEPENDENCIES:
   - InAppPurchases (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InAppPurchases: ad676de4308148950aba2793c687962289843519
+  InAppPurchases: fa6da6f52b643a16db2af3dcdc6dd7c93e304e86
 
 PODFILE CHECKSUM: f659f8511bfbb25a35cd5234d04da5cdb824292b
 
