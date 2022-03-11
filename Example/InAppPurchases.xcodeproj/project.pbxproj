@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		22618E2ECAED660D6549CE2B /* Pods_InAppPurchases_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InAppPurchases_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5533F618CCC70EDD176CDCF3 /* InAppPurchases.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = InAppPurchases.podspec; path = ../InAppPurchases.podspec; sourceTree = "<group>"; };
+		5533F618CCC70EDD176CDCF3 /* InAppPurchases.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = InAppPurchases.podspec; path = ../InAppPurchases.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* InAppPurchases_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchases_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
