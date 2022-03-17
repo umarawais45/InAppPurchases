@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InAppPurchases'
-  s.version          = '1.0'
+  s.version          = '1.0.1'
   s.summary          = 'In-app purchases handler written in swift'
   s.swift_version    = '5.0'
 

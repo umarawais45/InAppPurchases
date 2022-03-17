@@ -14,25 +14,25 @@ import StoreKit
 
 public class InAppPurchases {
     
-    public func requestProducts(_ products: Set<String>, _ completion: @escaping (([SKProduct]?) -> ())) {
+    public static func requestProducts(_ products: Set<String>, _ completion: @escaping (([SKProduct]?) -> ())) {
         IAP.requestProducts(products) { (response, error) in
             completion(response?.products)
         }
     }
     
-    public func purchaseProduct(productIdentifier: String,_ completion: @escaping ((Bool) -> ())) {
+    public static func purchaseProduct(productIdentifier: String,_ completion: @escaping ((Bool) -> ())) {
         IAP.purchaseProduct(productIdentifier, handler: { (productIdentifier, error) in
                 completion(error == nil)
         })
     }
     
-    public func restorePurchase(_ completion: @escaping ((Bool) -> ())) {
+    public static func restorePurchase(_ completion: @escaping ((Bool) -> ())) {
         IAP.restorePurchases { (products, error) in
             completion(!products.isEmpty)
         }
     }
     
-    public func isProductPurchased(_ productIdentifier: String, appSharedSecret: String, _ completion: @escaping ((Bool?, Error?) -> ())) {
+    public static func isProductPurchased(_ productIdentifier: String, appSharedSecret: String, _ completion: @escaping ((Bool?, Error?) -> ())) {
         IAP.validateReceipt(appSharedSecret) { (statusCode, products, json) in
                 guard let validDate = products?[productIdentifier] else {
                     completion(false, nil)
@@ -42,7 +42,7 @@ public class InAppPurchases {
         }
     }
     
-    public func manageSubscriptionsOnAppStore() {
+    public static func manageSubscriptionsOnAppStore() {
         if let url = URL(string: "https://apps.apple.com/account/subscriptions"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }

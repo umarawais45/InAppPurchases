@@ -17,28 +17,23 @@ pod 'InAppPurchases'
 
 ## Usage
 
-Create an instance of InAppPurchase Module
-```ruby
-let inAppPurchases = InAppPurchases()
-```
-
 #### Purchase a product
 ```ruby
-inAppPurchases.purchaseProduct(productIdentifier: "Your Product ID") { success in 
+InAppPurchases.purchaseProduct(productIdentifier: "Your Product ID") { success in 
     print(success)
 }
 ```
 
 #### Restore purchase
 ```ruby
-inAppPurchases.restorePurchase() { success in 
+InAppPurchases.restorePurchase() { success in 
     print(success)
 }
 ```
 
 #### Request Products
 ```ruby
-inAppPurchases.requestProducts([Your_ProductIDs]) { products in
+InAppPurchases.requestProducts([Your_ProductIDs]) { products in
     for product in products {
         print(product.localizedPrice())
     }
@@ -47,14 +42,14 @@ inAppPurchases.requestProducts([Your_ProductIDs]) { products in
 
 #### Validate Purchase 
 ```ruby
-inAppPurchases.isProductPurchased("Your Product ID", appSharedSecret: "Your app shared secret") { purchased in 
+InAppPurchases.isProductPurchased("Your Product ID", appSharedSecret: "Your app shared secret") { purchased in 
     print(purchased)
 }
 ```
 
 #### Open App Store Subscriptions Page
 ```ruby
-inAppPurchases.manageSubscriptionsOnAppStore()
+InAppPurchases.manageSubscriptionsOnAppStore()
 ```
 
 ## Author
