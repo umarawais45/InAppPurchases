@@ -11,7 +11,7 @@
 import Foundation
 import StoreKit
 
-
+//static methods
 public class InAppPurchases {
     
     public static func requestProducts(_ products: Set<String>, _ completion: @escaping (([SKProduct]?) -> ())) {
