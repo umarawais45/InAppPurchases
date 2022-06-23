@@ -48,4 +48,17 @@ public class InAppPurchases {
         }
     }
     
+    public static func getReceiptAfterPurchaseProduct(productIdentifier: String, userName: String?, _ completion: @escaping ((String?) -> ())) {
+        
+        InAppPurchases.purchaseProduct(productIdentifier: productIdentifier, userName: userName) { success in
+            
+            guard success else {
+                completion(nil)
+                return
+            }
+            
+            completion(Self.getReceipt())
+        }
+    }
+    
 }
